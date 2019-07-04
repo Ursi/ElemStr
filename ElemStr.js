@@ -84,4 +84,4 @@ export default class ElemStr extends Array {
 
         return str;
     }
-}
+};
