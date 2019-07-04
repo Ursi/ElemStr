@@ -13,7 +13,8 @@ export default class ElemStr extends Array {
         for (let char of str) this.append(char);
     }
 
-    //static get [Symbol.species]() {return Array;}
+    static get [Symbol.species]() {return Array;}
+    
     append(char, ...classNames) {
         let elemChar = document.createElement(this.type);
         elemChar.classList.add('elem-char', ...classNames);
