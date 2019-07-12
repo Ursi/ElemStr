@@ -69,6 +69,8 @@ export default class ElemStr extends Array {
                 }
             });
         }
+
+        return this;
     }
 
     toString(){
