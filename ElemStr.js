@@ -14,7 +14,7 @@ export default class ElemStr extends Array {
     }
 
     static get [Symbol.species]() {return Array;}
-    
+
     append(char, ...classNames) {
         let elemChar = document.createElement(this.type);
         elemChar.classList.add('elem-char', ...classNames);
@@ -23,12 +23,6 @@ export default class ElemStr extends Array {
         this.push(elemChar);
         this.fragment.appendChild(elemChar);
         return elemChar;
-    }
-
-    appendTo(elem) {
-        for (let elemChar of this) {
-            elem.appendChild(elemChar);
-        }
     }
 
     class(className) {
