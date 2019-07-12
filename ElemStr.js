@@ -41,11 +41,7 @@ export default class ElemStr extends Array {
     }
 
     hasClass(className) {
-        for (let elem of this) {
-            if (elem.classList.contains(className)) return true;
-        }
-
-        return false;
+        return this.some(elem => elem.classList.contains(className));
     }
 
     lastClass(className) {
